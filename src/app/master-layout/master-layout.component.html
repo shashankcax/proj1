@@ -1,0 +1,12 @@
+<span style="text-align: center"><h2 class="mat-display-2">Sample UI</h2></span>
+<div flexLayout="row">
+  <div fxFlex="20">
+    <div flexLayout="column" class="navBox">
+        <a [routerLink]="[{outlets:{sideBar:['building']}}]" routerLinkActive="router-link-active" ><button mat-raised-button color="warn">Building</button></a>
+        <a [routerLink]="[{outlets:{sideBar:['room']}}]" routerLinkActive="router-link-active" ><button mat-raised-button color="primary">Room</button></a>
+    </div>
+  </div>
+  <div fxFlex="80">
+    <router-outlet name="sideBar"></router-outlet>
+  </div>
+</div>

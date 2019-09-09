@@ -1,0 +1,7 @@
+.navBox{
+  width:20%;
+  position: fixed;
+}
+.navBox button{
+  width:80%;
+}
