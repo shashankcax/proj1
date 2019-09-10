@@ -26,12 +26,14 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 
 const materialModules = [
   FlexLayoutModule,
   MatIconModule,
+  MatRadioModule,
   MatSidenavModule,
   MatToolbarModule,
   MatInputModule,

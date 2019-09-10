@@ -1,4 +1,4 @@
-<mat-card>
+<!--<mat-card>
   <mat-card-header>
   </mat-card-header>
   <mat-card-content>
@@ -47,3 +47,14 @@
     </mat-card-actions>
   </mat-card>
 </div>
+-->
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input type="text" id="searchKey" placeholder="Pick one" (keydown.enter)="sendVal($event)" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete" matInput (optionSelected)="test($event.option.value)">
+      <mat-option *ngFor="let building of buildingData" [value]="building.name">
+        {{building.name}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>

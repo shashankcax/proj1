@@ -1,0 +1,19 @@
+<span style='text-align: center'><h4 class="mat-display-1">Form Test</h4></span>
+<div flexLayout="column">
+  <div fxFlex="100">
+    <span><h4 class="mat-display-1">Form Radio Test</h4></span>
+    <div class="example-container">
+      <form class="example-container" [formGroup]="options">
+        <div *ngFor="let item of data">
+          <label><h4>{{item.attribute_name}}</h4></label>
+          <mat-radio-group formControlName="dataLabel" disabled="{{item.is_disabled}}">
+            <mat-radio-button *ngFor="let box of item.attribute_value" (change)="changeAttr($event,item.attribute_id,box.val)" checked="{{box.state}}" value="{{box.val}}">{{box.val}} - {{box.state}}</mat-radio-button>
+          </mat-radio-group>
+          <hr>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div fxFlex="100">
+  </div>
+</div>

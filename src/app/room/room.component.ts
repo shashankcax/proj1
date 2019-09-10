@@ -16,6 +16,8 @@ export class RoomComponent implements OnInit {
   selectedSection = 0;
   selectedFloor = 0;
   selectedRoom = 0;
+  myControl = new FormControl();
+  myControl1 = new FormControl();
   bookId = new FormControl();
   bookForm: FormGroup;
   constructor(private formBuilder: FormBuilder, private update: UpdateService) {
@@ -27,12 +29,21 @@ export class RoomComponent implements OnInit {
 
   editField: any;
   ngOnInit() {
-
-    /*fromEvent(document.getElementById('searchKey'), 'keyup').pipe(
+    fromEvent(document.getElementById('searchKey'), 'keyup').pipe(
       debounceTime(1000),
       distinctUntilChanged(),
-      map(data => (data.target))
-    ).subscribe(val => console.log(val));*/
+      map(data => (data.target).value)
+    ).subscribe(
+      val => console.log(val),
+      //this.myControl1.valueChanges()
+      );
+  }
+  sendVal(event){
+    console.log(this.myControl.value);
+    //console.log(event);
+  }
+  test(event){
+    console.log(event);
   }
   changeBuilding(id: number, property: string, event: any) {
     console.log('1');

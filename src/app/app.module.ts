@@ -9,13 +9,15 @@ import { MasterLayoutComponent } from './master-layout/master-layout.component';
 import { BuildingComponent } from './building/building.component';
 import { RoomComponent } from './room/room.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormComponent } from './tests/reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MasterLayoutComponent,
     BuildingComponent,
-    RoomComponent
+    RoomComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
